@@ -1,0 +1,603 @@
+@font-face{
+  font-family: myFont;
+  src:url(shadow.otf);
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* css nav style*/
+
+ul{
+    list-style: none;
+   background-color: white;
+
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    
+}
+ul li a{
+    display: block;
+    padding: 25px 27px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+ul li ul.dropdown li{
+   display: block;
+   border-bottom:1px solid rgba(243, 230, 230, 0.945);
+}
+ul li ul.dropdown{
+    width: 150%;
+    background:whitesmoke;
+    position: absolute;
+    z-index: 999;
+    display: none;  
+}
+
+ul .dropdown li a{
+    padding:10px 10px;
+}
+ul li a:hover{
+   color:orange;
+   background-color: rgba(255, 255, 255, 0.253);
+
+}
+ul li:hover ul.dropdown{
+    display: block;
+}
+.nav-container{
+    display: flex;
+    width: 100%;
+    font-family:neucha,sans-serif;
+    position: relative;
+}
+.nav-container img{
+    height: 80px;
+    width: 80px;
+    margin-left:50px;
+    display:inline-block;
+}
+
+/*image silder style*/
+.sildes{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    cursor:grab;
+}
+.silde-silde-1{
+    position: absolute;
+    height: 100%;
+    opacity: 0;
+    inset: 0;
+    animation:silde-show 12s infinite;
+}
+.sildes img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.silde-silde-2{
+    animation-delay: 4s;
+}
+.silde-silde-3{
+    animation-delay: 9s;
+}
+
+
+@keyframes silde-show{
+    0%{
+        opacity: 0;
+    }
+    10%{
+
+        opacity: 1;
+    }
+    20%,
+    30%{
+        opacity: 1;
+        scale:1.03;
+    }
+    50%{
+        opacity: 0;
+        scale:1.03;
+    }
+
+}
+/* content div box style*/
+.content{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content h1{
+    color:rgb(24, 155, 113);
+    font-size: 50px;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    font-family:"neucha",sans-serif;
+}
+
+.content img{
+width: 42%;
+}
+.content p{
+    margin-top:15px;
+    font-size: 15px;
+    width: 90%;
+    font-family: "poppins",sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    line-height: 40px;
+    color:rgba(0, 0, 0,0.6)
+}
+.content .btn{
+     background-color: orange;
+     color:white;
+     padding:10px;
+     border-radius: 5px;
+     border:none;
+     font-family: "poppins",sans-serif;
+     font-size: 15px;
+     width: 200px;
+     margin-top: 30px;
+     margin-bottom: 60px;
+
+}
+
+/* content animation style*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+.content h1{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 15%;
+}
+
+.content p{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+.content .btn{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 35%;
+}
+
+/* content-2 div style*/
+
+.content-2{
+    background-color: lightblue;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content-2 h1{
+    font-size: 40px;
+    margin-top: 50px;
+    font-family:myFont;
+    color:white;
+}
+
+.content-2 p{
+    margin-top: 25px;
+    font-size: 15px;
+    width: 88%;
+    font-family: "poppins",sans-serif;
+    margin-left: 40px;
+    color:#626262;
+    margin-bottom: 500px;
+} 
+
+/* content-3 div style*/
+.content-3{
+    background-image:url(images/wood.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.content-3 h1{
+    font-size: 50px;
+    color:white;
+    font-family:"neucha",sans-serif;
+    margin-top: 40px;
+    font-weight: 400;
+}
+.content-3 p{
+    color: white;
+    width: 85%;
+    margin-top: 30px;
+    font-family: "poppins",sans-serif;
+    font-size: 15px;
+}
+.content-3 p span{
+     align-items: center;
+     margin-left: 30%;
+}
+.images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+.images p{
+    font-size: 18px;
+}
+.images .img-1{
+    position: absolute;
+    left:10%;
+    bottom:73%;
+    text-align: center;
+}
+.img-1 p{
+    margin-top:10px;
+
+}
+.images .img-2{
+    position: absolute;
+    top:5px;
+    text-align: center;
+}
+.img-2 p{
+    margin-top:10px;
+
+}
+.images .img-3{
+    display: inline-block;
+    position: relative;
+    left:30%;
+    text-align: center;
+}
+.img-3 p{
+    margin-top:10px;
+}
+.images .img-4{
+    display: inline-block;
+    position: relative;
+    right: 18%;
+    top:60px;
+    text-align: center;
+
+}
+.img-4 p{
+    margin-top:10px;
+}
+.images .img-5{
+    display: inline-block;
+    position: relative;
+    left: 15%;
+    bottom:150px;
+    text-align: center;
+}
+
+.img-5 p{
+    margin-top:20px;
+}
+.content-3 .btn{
+    background-color: orange;
+     color:white;
+     padding:10px;
+     border:1px solid white;
+     font-family: "poppins",sans-serif;
+     font-size: 15px;
+     width: 250px;
+     border-radius: 5px;
+     margin-bottom:50px;  
+}
+
+/* content-3 animation style*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+.content-3 h1{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 15%;
+}
+
+.content-3 p{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+.content-3 p span{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+
+.content-3 img{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+.content-3 .btn{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 35%;
+}
+
+/*content-4 div style*/
+.content-4{
+    background-image: url(images/bgimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.content-4 h1{
+    margin-top: 20%;
+    font-family: "neucha", sans-serif;
+}
+.content-4 p{
+    margin-top: 25px;
+    font-family: "poppins",sans-serif;
+}
+.content-4 p span{
+    margin-left:20%;
+    font-family: "poppins",sans-serif;
+}
+.content-4 .btn{
+    background-color: orange;
+     color:white;
+     padding:10px;
+     border:1px solid white;
+     font-family: "poppins",sans-serif;
+     font-size: 15px;
+     width: 250px;
+     border-radius: 5px;
+     margin-bottom:150px;  
+     margin-top: 50px;
+}
+
+
+/* content-4 animation style*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+.content-4 h1{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 15%;
+}
+
+.content-4 p{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+.content-4 .btn{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 35%;
+}
+
+/* content-5 div box style*/
+.content-5{
+    background-color: lightblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+.content-5 h1{
+   margin-top: 50px;
+   font-size: 37px;
+   font-family: myFont;
+   color: white;
+}
+.content-5 p{
+    margin-top: 25px;
+    font-family: "poppins",sans-serif;
+    width: 88%;
+    color:#626262;
+    font-size: 15px;
+}
+.content-5 p span{
+    margin-left:15%;
+}
+.content-5 .btn{
+    background-color: orange;
+    color:white;
+    padding:10px;
+    border:1px solid white;
+    font-family: "poppins",sans-serif;
+    font-size: 15px;
+    width: 200px;
+    border-radius: 5px;
+    margin-bottom:70px;  
+}
+
+/* content-5 animation style*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+.content-5 h1{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 15%;
+}
+
+.content-5 p{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+.content-5 .btn{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 35%;
+}
+/* content-6 div box style*/
+.content-6{
+    background-image: url(images/crop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+.content-6 h1{
+    margin-top: 15%;
+   font-family:"neucha",sans-serif;
+   font-size: 50px;
+}
+.content-6 p.fst{
+   font-family: "poppins",sans-serif;
+   font-size: 18px;
+   margin-top: 20px;
+   font-weight: 400;
+}
+.content-6 p span{
+    margin-left: 15%;
+} 
+
+.content-6 p.sec{
+    font-family: "poppins",sans-serif;
+    font-size: 15px;
+    margin-top: 20px;
+    font-weight: 400;
+ }   
+.content-6 p.fst{
+    font-family: "poppins",sans-serif;
+    font-size: 18px;
+    margin-top: 20px;
+ }
+.content-6 .small{  
+ margin-left: 15px;
+ margin-bottom: 30%;
+ font-size: 14px;
+}
+
+/* content-6 animation style*/
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale:0.5;
+    }
+    to{
+        opacity: 1;
+        scale:1;
+    }
+}
+.content-6 h1{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 15%;
+}
+
+.content-6 p{
+    animation:appear linear;
+    animation-timeline:view();
+    animation-range:entry 0% cover 30%;
+}
+/*footer style*/
+.footer{
+    width: 100%;
+    height: 100px;
+    background-color:#252525;
+    border-top-color: rgba(255, 255, 255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+}
+.footer-content {
+  background-color:#252525;
+  color:white;
+  font-family: "poppins",sans-serif;
+  font-size: 14px;
+  position: absolute;
+  top:30px;
+  left:2%;
+}
+.footer-content p{
+    color:white;
+    display: inline;
+    opacity: 0.7;
+}
+.footer-content a{
+  text-decoration: none;
+  color: blue;
+}
+
+.footer .social{
+    float: right;
+    margin-top: 20px;
+    background-color:#252525;
+}
+.footer .social i{
+   color: #626262;
+   font-size: 17px;
+   position: relative;
+   bottom:10px;
+   
+}
+.footer .social i:hover{
+    cursor: pointer;
+    color: white;
+}
